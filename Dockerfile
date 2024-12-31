@@ -21,14 +21,10 @@ RUN apt install -y wget
 
 # Install Rust.
 RUN curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh -s -- -y
-# RUN rustup toolchain install nightly-x86_64-unknown-linux-gnu
-# RUN rustup component add rust-src
 
 # Build liumOS.
 WORKDIR /root
 RUN git clone https://github.com/hikalium/liumos.git
 WORKDIR /root/liumos
-# RUN make tools
-# RUN make prebuilt
-# RUN make
+COPY build_on_container.sh build_on_container.sh
 
