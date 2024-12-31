@@ -7,3 +7,7 @@ CONTAINER=$(IMAGE)
 build:
 	./build.sh $(IMAGE) $(CONTAINER)
 
+.PHONY: delete
+delete:
+	./delete.sh $(IMAGE) $(CONTAINER)
+
