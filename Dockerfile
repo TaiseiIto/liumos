@@ -27,4 +27,6 @@ WORKDIR /root
 RUN git clone https://github.com/hikalium/liumos.git
 WORKDIR /root/liumos
 COPY build_on_container.sh build_on_container.sh
+COPY patch patch
+RUN git apply patch
 
