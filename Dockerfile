@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:20.04
 
 # Don't ask stdin anything to install software automatically.
 ENV DEBIAN_FRONTEND=noninteractive
@@ -6,13 +6,14 @@ ENV DEBIAN_FRONTEND=noninteractive
 # Install softwares.
 RUN apt update
 RUN apt upgrade -y
-RUN apt install -y clang
+RUN apt install -y clang-8
+RUN apt install -y lld-8
 RUN apt install -y clang-format
 RUN apt install -y cmake
 RUN apt install -y curl
 RUN apt install -y git
-RUN apt install -y libc++-dev
-RUN apt install -y libc++abi-dev
+RUN apt install -y libc++-8-dev
+RUN apt install -y libc++abi-8-dev
 RUN apt install -y lld
 RUN apt install -y qemu-system-x86
 RUN apt install -y vim
