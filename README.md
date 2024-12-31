@@ -1,2 +1,2 @@
-# liumos
-My liumOS builder
+# My [liumOS](https://github.com/hikalium/liumos) builder
+
