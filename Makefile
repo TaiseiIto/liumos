@@ -13,3 +13,7 @@ build:
 delete:
 	./delete.sh $(IMAGE) $(CONTAINER)
 
+.PHONY: run
+run:
+	./run.sh $(CONTAINER)
+

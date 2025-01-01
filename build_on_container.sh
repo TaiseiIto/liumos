@@ -9,4 +9,5 @@ make tools
 make prebuilt
 make
 make files
+zip -r liumos.zip mnt
 

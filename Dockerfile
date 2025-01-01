@@ -19,6 +19,7 @@ RUN apt install -y netcat
 RUN apt install -y qemu-system-x86
 RUN apt install -y vim
 RUN apt install -y wget
+RUN apt install -y zip
 
 # Install Rust.
 RUN curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh -s -- -y
