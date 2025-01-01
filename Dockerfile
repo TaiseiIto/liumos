@@ -31,3 +31,7 @@ COPY build_on_container.sh build_on_container.sh
 COPY patch patch
 RUN git apply patch
 
+# Expose VNC port.
+ARG vnc_port
+EXPOSE $vnc_port
+
