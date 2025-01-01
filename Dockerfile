@@ -7,7 +7,6 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt update
 RUN apt upgrade -y
 RUN apt install -y clang-8
-RUN apt install -y lld-8
 RUN apt install -y clang-format
 RUN apt install -y cmake
 RUN apt install -y curl
@@ -15,6 +14,8 @@ RUN apt install -y git
 RUN apt install -y libc++-8-dev
 RUN apt install -y libc++abi-8-dev
 RUN apt install -y lld
+RUN apt install -y lld-8
+RUN apt install -y netcat
 RUN apt install -y qemu-system-x86
 RUN apt install -y vim
 RUN apt install -y wget
