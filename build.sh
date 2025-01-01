@@ -20,5 +20,10 @@ if [ -z "$(docker ps --format {{.Names}} | grep -x $container)" ]; then
 	docker exec $container /bin/bash -c "cd /root/liumos && ./build_on_container.sh"
 fi
 
+# Extract liumOS.
+if [ ! -d mnt ]; then
+	docker cp $container:/root/liumos/mnt mnt
+fi
+
 docker attach $container
 
