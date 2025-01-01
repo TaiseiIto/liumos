@@ -14,6 +14,6 @@ delete:
 	./delete.sh $(IMAGE) $(CONTAINER)
 
 .PHONY: run
-run:
+run: build
 	./run.sh $(CONTAINER)
 
