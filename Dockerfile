@@ -30,6 +30,7 @@ RUN git clone https://github.com/hikalium/liumos.git
 WORKDIR /root/liumos
 RUN git checkout dd619eb19c0c04504228494e8af65945ad31aa9b
 COPY build_on_container.sh build_on_container.sh
+COPY run_on_container.sh run_on_container.sh
 COPY patch patch
 RUN git apply patch
 

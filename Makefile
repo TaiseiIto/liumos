@@ -3,7 +3,6 @@ PRODUCT=$(shell echo $(REPOSITORY) | awk -F '[./]' '{print $$(NF-1)}')
 IMAGE=$(shell echo $(PRODUCT) | awk '{print tolower($$0)}')
 CONTAINER=$(IMAGE)
 VNC_PORT=5905
-TARGET=liumos.zip
 
 .PHONY: build
 build:
