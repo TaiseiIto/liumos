@@ -22,8 +22,10 @@ if [ -z "$(docker ps --format {{.Names}} | grep -x $container)" ]; then
 fi
 
 # Extract liumOS.
-if [ ! -d mnt ]; then
+if [ ! -e liumos.zip ]; then
 	docker cp $container:/root/liumos/liumos.zip liumos.zip
+fi
+if [ ! -d mnt ]; then
 	docker cp $container:/root/liumos/mnt mnt
 fi
 
