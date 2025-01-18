@@ -17,7 +17,7 @@ fi
 # Start the docker container.
 if [ -z "$(docker ps --format {{.Names}} | grep -x $container)" ]; then
 	docker start $container
-	docker exec $container /bin/bash -c "cd /root/liumos && ./build_on_container.sh"
+	docker exec --workdir /root/liumos $container ./build_on_container.sh
 	docker stop $container
 fi
 
