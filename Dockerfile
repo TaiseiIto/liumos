@@ -22,7 +22,7 @@ RUN apt install -y wget
 RUN apt install -y zip
 
 # Install Rust.
-RUN curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh -s -- -y
+RUN curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain=nightly-2022-04-29-x86_64-unknown-linux-gnu
 
 # Build liumOS.
 WORKDIR /root
