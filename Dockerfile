@@ -4,22 +4,20 @@ FROM ubuntu:20.04
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Install softwares.
-RUN apt update
-RUN apt upgrade -y
-RUN apt install -y clang-8
-RUN apt install -y clang-format
-RUN apt install -y cmake
-RUN apt install -y curl
-RUN apt install -y git
-RUN apt install -y libc++-8-dev
-RUN apt install -y libc++abi-8-dev
-RUN apt install -y lld
-RUN apt install -y lld-8
-RUN apt install -y netcat
-RUN apt install -y qemu-system-x86
-RUN apt install -y vim
-RUN apt install -y wget
-RUN apt install -y zip
+RUN apt-get update && apt-get upgrade -y && apt-get install -y clang-8
+RUN apt-get update && apt-get upgrade -y && apt-get install -y clang-format
+RUN apt-get update && apt-get upgrade -y && apt-get install -y cmake
+RUN apt-get update && apt-get upgrade -y && apt-get install -y curl
+RUN apt-get update && apt-get upgrade -y && apt-get install -y git
+RUN apt-get update && apt-get upgrade -y && apt-get install -y libc++-8-dev
+RUN apt-get update && apt-get upgrade -y && apt-get install -y libc++abi-8-dev
+RUN apt-get update && apt-get upgrade -y && apt-get install -y lld
+RUN apt-get update && apt-get upgrade -y && apt-get install -y lld-8
+RUN apt-get update && apt-get upgrade -y && apt-get install -y netcat
+RUN apt-get update && apt-get upgrade -y && apt-get install -y qemu-system-x86
+RUN apt-get update && apt-get upgrade -y && apt-get install -y vim
+RUN apt-get update && apt-get upgrade -y && apt-get install -y wget
+RUN apt-get update && apt-get upgrade -y && apt-get install -y zip
 
 # Install Rust.
 RUN curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain=nightly-2022-04-29-x86_64-unknown-linux-gnu
