@@ -20,7 +20,8 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y wget
 RUN apt-get update && apt-get upgrade -y && apt-get install -y zip
 
 # Install Rust.
-RUN curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain=nightly-2022-04-29-x86_64-unknown-linux-gnu
+# Rust 1.65.0 is released on 3 November, 2022
+RUN curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain=nightly-2022-11-03-x86_64-unknown-linux-gnu
 
 # Build liumOS.
 WORKDIR /root
